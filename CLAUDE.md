@@ -27,6 +27,9 @@ npm run e2e     # Playwright, phone viewport, fake GPS, against the fake server
   the backend is idempotent by the trip id the phone generates, so resending is always safe.
 - The backend answers JSON `{ok:false, error}` instead of throwing; the Sheet stores everything as text (dates are
   the phone's local time `yyyy-MM-ddTHH:mm`).
+- The look is a dark terminal style in JetBrains Mono, bundled in `app/fonts` (woff2, SIL Open Font License,
+  `OFL.txt` next to it) and cached by the service worker, so it works offline and on any phone. Bump the cache
+  name in `app/sw.js` whenever a cached file changes.
 - Screens are shown and hidden with the `hidden` attribute (`[hidden]{display:none!important}` in the CSS): the
   e2e test checks only one screen is visible at a time.
 - Tests: `test/backend.test.mjs` (backend rules), `test/e2e.mjs` (the app end to end, Spanish and Portuguese,

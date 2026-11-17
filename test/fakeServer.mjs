@@ -10,7 +10,8 @@ import {createBackend} from './appsScript.mjs';
 
 const ROOT = fileURLToPath(new URL('../app/', import.meta.url));
 const TYPES = {'.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png',
-    '.webmanifest': 'application/manifest+json'};
+    '.webmanifest': 'application/manifest+json',
+    '.woff2': 'font/woff2'};
 
 export function startFakeServer(port = 0) {
     const backend = createBackend();
