@@ -1,7 +1,8 @@
 // Guarda la app en el móvil para que abra sin cobertura. Las llamadas a la oficina (Google) no pasan por aquí.
-const CACHE = 'cv-mobile-v1';
+const CACHE = 'cv-mobile-v2';
 const FILES = ['./', 'index.html', 'styles.css', 'i18n.js', 'app.js', 'manifest.webmanifest', 'icons/icon-180.png',
-    'icons/icon-192.png', 'icons/icon-512.png'];
+    'icons/icon-192.png', 'icons/icon-512.png', 'fonts/JetBrainsMono-Regular.woff2',
+    'fonts/JetBrainsMono-Bold.woff2'];
 
 self.addEventListener('install', event => {
     event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
